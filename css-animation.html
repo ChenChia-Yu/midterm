@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0px;
+            margin:0px;
+            box-sizing: border-box;
+        }
+        .box{
+            float:left;
+            position: relative;
+            top: 100px;
+            left: 100px;
+            width: 50px;
+            height: 50px;
+            background: #183;
+            animation-name:gogo;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            animation-direction: alternate-reverse;
+            animation-fill-mode: both;
+        }
+        @keyframes gogo{
+            0%{
+                left:100px;
+            }
+            25%{
+                transform:rotate3d(420,50,60,720deg)scale(3);
+            }
+            50%{
+                left:400px;
+            }
+            100%{
+                left:200px;
+                background:rgba(216, 241, 170, 0.863);
+                opacity: .5;
+                box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
