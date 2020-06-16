@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap');
+    * {
+        box-sizing: border-box;
+        font-family: "Roboto","Microsoft Jhenghei";
+    }
+    html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+    img {
+        width: 100%;
+        /*  讓圖片符合父元素寬度*/
+        vertical-align: top;
+        /* 解決圖片被父元素包住時的下方空隙 */
+    }
+    .clearfix::after {
+        content:"";
+        display: block;
+        clear: both;
+    }
+    .vam {
+        font-size: 0;
+    }
+    .vam > * {
+        font-size: 16px;
+        display: inline-block;
+        vertical-align: middle;
+        float:none!important;
+    }
+    .vam::after {
+        content:"";
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .section-title {
+        font-size: 36px;
+    }
+    .t-left {
+        text-align: left;
+    }
+    .t-center {
+        text-align: center;
+    }
+    .t-right {
+        text-align: right;
+    }
+    @media(min-width:1200px){
+        .t-xl-left {
+            text-align: left;
+        }
+        .t-xl-center {
+            text-align: center;
+        }
+        .t-xl-right {
+            text-align: right;
+        }
+    }
+    .no-padding {
+        padding: 0!important;
+    }
+    li a{
+        transition:swing-top-fwd 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+    li a:hover{
+        transform: rotateX(360deg);
+    }
+/* GLOBAL DONE******************************************************************* */
+    
