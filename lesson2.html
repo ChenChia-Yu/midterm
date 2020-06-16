@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>魏晉</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="LOGO.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="slick/slick.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="hamburger.css">
+</head>
+<style>
+    /*hamburger*/
+    body{
+        overflow-x: hidden;
+    }
+    .clearfix::after {
+        content:"";
+        display: block;
+        clear: both;
+    }
+
+    .hamburger {
+        float: right;
+    }
+    
+    .collapse{
+        
+        margin:0px;
+        padding:0px;
+        border:0px;
+        box-sizing:border-box;
+        
+    }
+
+
+
+
+
+
+    .menu>ul>li>ul{
+        display:none;
+        
+    }
+
+    .menu>ul>li>ul>li{
+        overflow:hidden;
+        transition:background-color 3s ease;
+        background-color:#fff5bb4f;
+        width: 100%;
+        /* display: block; */
+        /* transition:10s; */
+        
+    }
+    
+    .menu>ul>li>ul>li>a{
+        display:block;
+        text-decoration:none;
+    }
+
+    .menu>ul>.down1>.show1>.show3>ul{
+        visibility: hidden;
+        position:absolute;
+        width:130px;
+        left: 100px;
+        /*border:1px solid;*/
+    }
+    .menu>ul>.down1>.show1>.show3:hover>ul{
+        visibility: visible;
+        top:50px;
+        
+    }
+    
+    .menu>ul>.down1>.show1>.show3>ul>li{
+        transition: height 0.5s;
+        text-align: center;
+        clear: both;
+        width: 100%;
+    }
+    .menu>ul>.down1>.show1>.show3>ul>li:hover{
+        background: #fff5bb4f;
+    }
+    .menu>ul>.down1>.show1>.show3>ul>li>a{
+        display:block;
+    }
+
+    .menu>ul>.down1>.show1>.show4>ul{
+        visibility: hidden;
+        position:absolute;
+        width:130px;
+        left: 100px;
+        /*border:1px solid;*/
+    }
+    .menu>ul>.down1>.show1>.show4:hover>ul{
+        visibility: visible;
+        top:100px;
+        
+    }
+    .menu>ul>.down1>.show1>.show4>ul>li{
+        transition: height 0.5s;
+        text-align: center;
+        clear: both;
+        width: 100%;
+    }
+    .menu>ul>.down1>.show1>.show4>ul>li:hover{
+        background-color: #fff5bb4f;
+    }
+    .menu>ul>.down1>.show1>.show4>ul>li>a{
+        display:block;
+        margin:auto;
+    }
+    .menu>ul>.down1>.show1>.show3>ul>li>ul {
+        visibility: hidden;
+        position: absolute;
+        width: 130px;
+        left: 130px;
+        top:0px;
+    }
+    .menu>ul>.down1>.show1>.show3>ul>li:hover>ul {
+        visibility: visible;
+       
+    }
+    .menu>ul>.down1>.show1>.show4>ul>li>ul {
+        visibility: hidden;
+        position: absolute;
+        width: 130px;
+        left: 130px;
+        top:0px;
+    }
+    .menu>ul>.down1>.show1>.show4>ul>li:hover>ul {
+        visibility: visible;
+       
+    }
+
+
+
+
+    .menu>ul>.down2>.show2>.show3>ul{
+        visibility: hidden;
+        position:absolute;
+        width:130px;
+        left: 100px;
+        /*border:1px solid;*/
+    }
+    .menu>ul>.down2>.show2>.show3:hover>ul{
+        visibility: visible;
+        top:50px;
+        
+    }
+    
+    .menu>ul>.down2>.show2>.show3>ul>li{
+        transition: height 0.5s;
+        text-align: center;
+        clear: both;
+        width: 100%;
+    }
+    .menu>ul>.down2>.show2>.show3>ul>li:hover{
+        background: #fff5bb4f;
+    }
+    .menu>ul>.down2>.show2>.show3>ul>li>a{
+        display:block;
+    }
+
+    .menu>ul>.down2>.show2>.show4>ul{
+        visibility: hidden;
+        position:absolute;
+        width:130px;
+        left: 100px;
+        /*border:1px solid;*/
+    }
+    .menu>ul>.down2>.show2>.show4:hover>ul{
+        visibility: visible;
+        top:100px;
+        
+    }
+    .menu>ul>.down2>.show2>.show4>ul>li{
+        transition: height 0.5s;
+        text-align: center;
+        clear: both;
+        width: 100%;
+    }
+    .menu>ul>.down2>.show2>.show4>ul>li:hover{
+        background-color: #fff5bb4f;
+    }
+    .menu>ul>.down2>.show2>.show4>ul>li>a{
+        display:block;
+        margin:auto;
+    }
+    .menu>ul>.down2>.show2>.show3>ul>li>ul {
+        visibility: hidden;
+        position: absolute;
+        width: 130px;
+        left: 130px;
+        top:0px;
+    }
+    .menu>ul>.down2>.show2>.show3>ul>li:hover>ul {
+        visibility: visible;
+    }
+    .menu>ul>.down2>.show2>.show4>ul>li>ul {
+        visibility: hidden;
+        position: absolute;
+        width: 130px;
+        left: 130px;
+        top:0px;
+    }
+    .menu>ul>.down2>.show2>.show4>ul>li:hover>ul {
+        visibility: visible;
+    }
+
+
+    /*lesson3*/
+    .menu>ul>.down3>.show3-1>.show4>ul{
+        visibility: hidden;
+        position:absolute;
+        width:130px;
+        left: 100px;
+        /*border:1px solid;*/
+    }
+    .menu>ul>.down3>.show3-1>.show4:hover>ul{
+        visibility: visible;
+        top:50px;
+        
+    }
+    
+    .menu>ul>.down3>.show3-1>.show4>ul>li{
+        transition: height 0.5s;
+        text-align: center;
+        clear: both;
+        width: 100%;
+    }
+    .menu>ul>.down3>.show3-1>.show4>ul>li>ul{
+        visibility: hidden;
+        position:absolute;
+        width:130px;
+        left: 130px;
+        /*border:1px solid;*/
+    }
+    .menu>ul>.down3>.show3-1>.show4>ul>.lesson3show1:hover>ul{
+        visibility: visible;
+        top:0px;
+        
+    }
+    .menu>ul>.down3>.show3-1>.show4>ul>.lesson3show2:hover>ul{
+        visibility: visible;
+        top:50px;
+        
+    }
+    .menu>ul>.down3>.show3-1>.show4>ul>.lesson3show3:hover>ul{
+        visibility: visible;
+        top:100px;
+        
+    }
+    .menu>ul>.down3>.show3-1>.show4>ul>li:hover{
+        background: #fff5bb4f;
+    }
+    .menu>ul>.down3>.show3-1>.show4>ul>li>a{
+        display:block;
+    }
+    
+
+    /*lesson3*/
+
+
+    /*lesson4*/
+    .menu>ul>.down4>.show4-1{
+        visibility: hidden;
+        position:absolute;
+        
+        /*border:1px solid;*/
+    }
+    .menu>ul>.down4:hover>.show4-1{
+        visibility: visible;
+        top:50px;
+        
+    }
+    
+    .menu>ul>.down4>.show4-1>li{
+        transition: height 0.5s;
+        text-align: center;
+        clear: both;
+        width: 100%;
+    }
+    .menu>ul>.down4>.show4-1>.lesson4show2>ul{
+        visibility: hidden;
+        position:absolute;
+        width:130px;
+        left: 100px;
+        /*border:1px solid;*/
+    }
+    /*.menu>ul>.down4>.show4-1>.show4>ul>.lesson4show1:hover>ul{
+        visibility: visible;
+        top:0px;
+        
+    }*/
+    .menu>ul>.down4>.show4-1>.lesson4show2:hover>ul{
+        visibility: visible;
+        top:0px;
+        
+    }
+    .menu>ul>.down4>.show4-1>.lesson4show2:hover>ul>li{
+        transition: height 0.5s;
+        text-align: center;
+        clear: both;
+        width: 100%;
+        
+    }
+
+    /*.menu>ul>.down4>.show4-1>.show4>ul>.lesson4show3:hover>ul{
+        visibility: visible;
+        top:100px;
+        
+    }*/
+   
+
+    /*lesson4*/
+
+    /*lesson5*/
+    .menu>ul>.down5>.show5-1{
+        visibility: hidden;
+        position:absolute;
+        
+        /*border:1px solid;*/
+    }
+    .menu>ul>.down5:hover>.show5-1{
+        visibility: visible;
+        top:50px;
+        
+    }
+    
+    .menu>ul>.down5>.show5-1>li{
+        transition: height 0.5s;
+        text-align: center;
+        clear: both;
+        width: 100%;
+    }
+    .menu>ul>.down5>.show5-1>.down5-1>ul{
+        visibility: hidden;
+        position:absolute;
+        width:200px;
+        left: 100px;
+        /*border:1px solid;*/
+    }
+    /*.menu>ul>.down4>.show4-1>.show4>ul>.lesson4show1:hover>ul{
+        visibility: visible;
+        top:0px;
+        
+    }*/
+    .menu>ul>.down5>.show5-1>.down5-1:hover>ul{
+        visibility: visible;
+        top:0px;
+        
+    }
+    .menu>ul>.down5>.show5-1>.down5-1:hover>ul>li{
+        transition: height 0.5s;
+        text-align: center;
+        clear: both;
+        width: 100%;
+        
+    }
+
+    
+    .logo>a>img{
+        width: 60px;
+        height: 60px;
+    }
+    .unlock{
+        max-width:586px;
+        max-height: 296px;
+    }
+    
+
+    
+    
+    
+    
+
+    @media(min-width:960px){
+        .hamburger {
+            display: none;
+        }
+        
+        .collapse{
+            display:block;
+        }
+        .logo{
+            float:left;
+        }
+        .nav li{
+            float:left;
+        }
+        .collapse{
+            float:left;
+        }
+        .menu>ul>li>ul{
+            width:100px;
+            display:block;    
+        }
+    }
+    /*endhamburger*/
+
+    .lock{
+        margin:auto;
+    }
+    .modal{
+        display:none;
+        /*margin:auto;*/
+    }
+    .modal .overlay{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity:.5;
+        margin:auto;
+        top: 0;
+        left: 0;
+        animation-name:an;
+        animation-duration: .5s;
+    }
+    .modal .wrapper{
+        width: 100%;
+        position: relative;
+        z-index: 99;
+        background: #ffffff;
+        margin:auto;
+        padding: 30px;
+        border-radius:5px;
+        animation-name:an2;
+        animation-duration: .5s;
+    }
+    @keyframes an{
+        from{
+            opacity:0;
+            width: 0%;
+        }
+        to{
+            opacity:.5;
+            width: 100%;
+        }
+    }
+    @keyframes an2{
+        from{
+            width: 0%;
+        }
+        to{
+            width: 60%;
+        }
+    }
+    .bg{
+        background: skyblue;
+        height: auto;
+        padding: 50px;
+        
+    }
+    .space{
+        width: 300px;
+        height: 200px;
+        position: relative;
+        perspective: 800px;
+        margin: 15% auto;
+        
+    }
+
+    .carousel{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transform-style: preserve-3d;
+        animation: ro2 3s infinite;
+        animation-direction: alternate;
+    }
+    .plane{
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        /*background-image: linear-gradient(red,purple);*/
+        /*opacity: .6;*/
+    }
+    .plane>img{
+        width: 100%;
+    }
+    .plane:nth-of-type(1){
+        transform: translateZ(300px);
+    }
+    .plane:nth-of-type(2){
+        transform: rotateY(60deg)translateZ(300px);
+    }
+    .plane:nth-of-type(3){
+        transform: rotateY(120deg)translateZ(300px);
+    }
+    .plane:nth-of-type(4){
+        transform: rotateY(180deg)translateZ(300px);
+    }
+    .plane:nth-of-type(5){
+        transform: rotateY(240deg)translateZ(300px);
+    }
+    .plane:nth-of-type(6){
+        transform: rotateY(300deg)translateZ(300px);
+    }
+    .plane img{
+        
+        height:230px;
+    }
+    
+    
+    @keyframes ro{
+        from{
+
+        }
+        to{
+            transform:rotateY(360deg);
+        }
+    }
+    @keyframes ro2{
+        0%{
+
+        }
+        8.3%{
+
+        }
+        16.6%{
+            transform:rotateY(60deg);
+        }
+        24.9%{
+            transform:rotateY(60deg);
+        }
+        33.2%{
+            transform:rotateY(120deg);
+        }
+        41.5%{
+            transform:rotateY(120deg);
+        }
+        49.8%{
+            transform:rotateY(180deg);
+        }
+        58.1%{
+            transform:rotateY(180deg);
+        }
+        66.4%{
+            transform:rotateY(240deg);
+        }
+        
+        74.7%{
+            transform:rotateY(240deg);
+        }
+        83%{
+            transform:rotateY(300deg);
+        }
+        91.3%{
+            transform: rotateY(300deg);
+        }
+        100%{
+            transform: rotateY(360deg);
+        }
+
+        
+    }
+    div>a>img:nth-last-of-type(1){
+        display:none;
+    }
+    .image{
+        width:216px ;
+        height:109px ;
+    }
+</style>
+<body>
+    <nav class="full-width clearfix">
+        <div class="fixed-width">
+            <div class="hamburger"><span></span></div>
+            <div class="logo">
+                <a href="#"><img style="display:block;" src="LOGO.png" alt=""></a>
+            </div>
+            <!-- <div class="collapse"> -->
+                <div class="menu">
+                    <ul>
+                        <li><a href="#">首頁</a></li>
+                        <li class="down1"><a href="lesson1.html">先秦▼</a>
+                            <ul class="show1">
+                                <li><a href="lesson1_intro.html">介紹</a></li>
+                                <li class="show3"><a href="#">神話</a>
+                                    <ul>
+                                        <li class="lesson1_show2"><a href="lesson1_mountain.html"> &lt 山海經 &gt </a>
+                                            <ul class="lesson1_book">
+                                                <li><a href="lesson1_mountain.html"> &lt 夸父追日 &gt</a></li>
+                                                <li><a href="lesson3.html#2">&lt 精衛填海 &gt</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="show4"><a href="#">寓言</a>
+                                    <ul>
+                                        <li class="lesson1_show3.html"><a href="lesson1_korea.html">韓非子</a>
+                                            <ul>
+                                                <li><a href="#">鄭人買履</a></li>
+                                                <li><a href="#">齊桓公</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="test1.html">小試身手</a></li>
+                                <li><a href="lesson1_video.html">影音</a></li>
+                                <li><a href="#">活動</a></li>
+                            </ul>
+                        </li>
+                        <li class="down2"><a href="lesson2.html">魏晉▼</a>
+                            <ul class="show2">
+                                <li><a href="#">介紹</a></li>
+                                <li class="show3"><a href="">志人小說</a>
+                                    <ul>
+                                        <li><a href="lesson2_person.html"> &lt 世說新語 &gt </a>
+                                            <ul>
+                                                <li><a href="#"> &lt 坦腹東床 &gt </a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="show4"><a href="#">志怪小說</a>
+                                    <ul>
+                                        <li><a href="lesson2_monster.html"> &lt&lt搜神記&gt&gt </a>
+                                            <ul>
+                                                <li><a href="#"> &lt干將莫邪&gt </a></li>
+                                                <li><a href="#"> &lt賣鬼&gt</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="test2.html">小試身手</a></li>
+                                <li><a href="lesson2_video.html">影音</a></li>
+                                <li><a href="#">活動</a></li>
+                            </ul>
+                        </li>
+                        <li class="down3"><a href="lesson3.html">唐代▼</a>
+                            <ul class="show3-1">
+                                <li><a href="#">介紹</a></li>
+                                <li class="show4"><a href="lesson3_legacy.html">傳奇</a>
+                                    <ul>
+                                        <li class="lesson3show1"><a href="#">俠義類</a>
+                                            <ul>
+                                                <li><a href="lesson3.html#1">&lt&lt虯髯客傳&gt&gt</a></li>
+                                                <li><a href="lesson3.html#2">&lt&lt紅線傳&gt&gt</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="lesson3show2"><a href="#">愛情類</a>
+                                            <ul>
+                                                <li><a href="lesson3.html#3">&lt&lt霍小玉傳&gt&gt</a></li>
+                                                <li><a href="lesson3.html#4">&lt&lt鶯鶯傳&gt&gt</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="lesson3show3"><a href="#">神怪類</a>
+                                            <ul>
+                                                <li><a href="lesson3.html#5">&lt&lt枕中記&gt&gt</a></li>
+                                                <li><a href="lesson3.html#6">&lt&lt離魂記&gt&gt</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="lesson3_video.html"> 影音 </a></li>
+                                <li><a href="test3.html">小試身手</a></li>
+                                <li><a href="#">活動</a></li>
+                            </ul>
+                        </li>
+                        <li class="down4"><a href="lesson4.html">明清▼</a>
+                            <ul class="show4-1">
+                               
+                                <li class="lesson4show2"><a href="lesson4_novel.html">章回小說</a>
+                                    <ul>
+                                        <li><a href="#">&lt&lt紅樓夢&gt&gt</a></li>
+                                        <li><a href="#">&lt&lt三國演義&gt&gt</a></li>
+                                        <li><a href="#">&lt&lt水滸傳&gt&gt</a></li>
+                                        <li><a href="#">&lt&lt西遊記&gt&gt</a></li>
+                                        <li><a href="#">&lt&lt儒林外史&gt&gt</a></li>
+                                    </ul>
+                                </li>
+                                
+                            
+                                <li><a href="test4.html">小試身手</a></li>
+                                <li><a href="lesson4_video.html">影音</a></li>
+                                <li><a href="#">活動</a></li>
+                            </ul>
+                        </li>
+                        <li class="down5"><a href="lesson5.html">現代</a>
+                            <ul class="show5-1">
+                               
+                                <li class="down5-1"><a href="lesson5-1.html">現代小說</a>
+                                    <ul>
+                                        <li><a href="#">&lt&lt白玫瑰與紅玫瑰&gt&gt</a></li>
+                                        <li><a href="#">&lt&lt髻&gt&gt</a></li>
+                                        <li><a href="#">&lt&lt再別康橋&gt&gt</a></li>
+                                        <li><a href="#">&lt&lt背影&gt&gt</a></li>
+                                        <li><a href="#">&lt&lt目送&gt&gt</a></li>
+                                        
+                                        
+                                    </ul>
+                                </li>
+                                
+                            
+                                <li><a href="test5.html">小試身手</a></li>
+                                <li><a href="lesson5_video.html">影音</a></li>
+                                <li><a href="#">活動</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            <!-- </div> -->
+                <div class="login">
+                    <ul>
+                        <li><a href="./php_user/register.php">註冊</a></li>
+                        <li><a href="./php_user/login.php">登入</a></li>
+                    </ul>
+                </div>
+        </div>
+    </nav>
+
+
+    <div id="slider">
+        <!-- <div class="col-xl-12"> -->
+            <!-- <h1>先秦</h1> -->
+        <!-- </div> -->
+        <div id="top">
+            <img src="ch2.jpg" alt="">
+            <img src="ch2.jpg" alt="">
+            <img src="ch2.jpg" alt="">
+            <img src="ch2.jpg" alt="">
+            <img src="ch2.jpg" alt="">
+            <img src="ch2.jpg" alt="">
+            <img src="ch2.jpg" alt="">
+            <img src="ch2.jpg" alt="">
+            <img src="ch2.jpg" alt="">
+        </div>
+    </div>
+    <div class="full-width clearfix info">
+        <div class="fixed-width">
+            <div class="col-xl-12 col-12 mb-5 border-bottom border-danger">
+                <h2>小說</h2>
+            </div>
+        </div>
+        <div class="col-lg-4 t-center">
+            <a class="tcl"><img style="display:block;" src="ch2-1.jpg" ></a>
+                <h4 class="mt-5">志人小說</h4>
+                <a name="tc1"></a>
+                <p class="t-left pp">志人小說</p>
+                
+        </div>
+        
+        <div class="col-lg-4 t-center">
+            <a class="tcl"><img style="display:block;" src="ch2-2.jpg" ></a>
+                <h4 class="mt-5">魏晉小說</h4>
+                <a name="tc1"></a>
+                <p class="t-left pp">魏晉小說</p>
+                
+        </div>
+        <div class="col-lg-4 t-center">
+            <a class="tcl"><img style="display:block;" src="ch2-3.jpg" ></a>
+                <h4 class="mt-5">志怪小說</h4>
+                <a name="tc1"></a>
+                <p class="t-left pp">志怪小說</p>
+                
+        </div>
+        <!-- <hr> -->
+    </div>
+    <div class="full-width clearfix"> 
+        <div class="full-width vid">
+                <!-- <div class="col-lg-12">
+                    <h1>神話&寓言</h1>    
+                </div> -->
+                <!-- <div class="col-xl-12 col-12 m-auto"> -->
+                    <div class="col-4 m-auto">
+                        <video src="ch-4.mp4" controls></video>
+                    </div>
+                    <div class="col-4">
+                        <video src="ch-5.mp4" controls></video>
+                    </div>
+                    <div class="col-4">
+                        <video src="ch-6.mp4" controls></video>
+                    </div>
+                <!-- </div> -->
+        </div>
+    </div>
+     <!-- <div class="full-width clearfix">
+        <div class="fixed-width">
+            <div class="col-xl-12 col-12 mt-5 border-bottom border-success">
+                <h2>XXX</h2>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <img src="https://img.ruten.com.tw/s1/5/43/8d/21750434455437_675.jpg" alt="">
+        </div>        
+        <div class="col-lg-3">
+            <img src="https://img.ruten.com.tw/s1/5/43/8d/21750434455437_675.jpg" alt="">
+        </div>        
+        <div class="col-lg-3">
+            <img src="https://img.ruten.com.tw/s1/5/43/8d/21750434455437_675.jpg" alt="">
+        </div>        
+        <div class="col-lg-3">
+            <img src="https://img.ruten.com.tw/s1/5/43/8d/21750434455437_675.jpg" alt="">
+        </div>
+        <div class="col-lg-3">
+            <div class="border">
+                <p class="t-left m-2">購物招生不行樹林，但我不肯採用導演進口一定會流行並在，歌詞一。</p>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="border">
+                <p class="t-left m-2">相對你知道規模總是熱情內容簡介驚人這次傷心，對。</p>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="border">
+                <p class="t-left m-2">來自看到門口教程全面不願導航讓我引發更大高度，一。</p>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="border">
+                <p class="t-left m-2">回家強烈股權製造工程師降低程度風險本論壇，豐富加大也沒天。</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="full-width clearfix">
+        <div class="fixed-width">
+            <div class="col-xl-12 col-12 mt-5 border-bottom border-info">
+                <h2>小測驗區</h2>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <img src="https://www.remove.bg/assets/start-0e837dcc57769db2306d8d659f53555feb500b3c5d456879b9c843d1872e7baa.jpg" alt="">
+            <form class="answer1 mt-3">
+                <input type="text" class="form-control" id="submitanswer" name="submitanswer" placeholder="請輸入答案" required>
+                <button id="btn1" type="submit" class="btn btn-default">
+                    送出答案
+                  </button>
+            </form>
+        </div>
+        <div class="col-lg-3">
+            <img src="https://www.remove.bg/assets/start-0e837dcc57769db2306d8d659f53555feb500b3c5d456879b9c843d1872e7baa.jpg" alt="">
+            <form class="answer2 mt-3">
+                <input type="text" class="form-control" id="submitanswer2" name="submitanswer" placeholder="請輸入答案" required>
+                <button id="btn2" type="submit" class="btn btn-default">
+                    送出答案
+                  </button>
+            </form>
+        </div>
+        <div class="col-lg-3">
+            <img src="https://www.remove.bg/assets/start-0e837dcc57769db2306d8d659f53555feb500b3c5d456879b9c843d1872e7baa.jpg" alt="">
+            <form class="answer3 mt-3">
+                <input type="text" class="form-control" id="submitanswer3" name="submitanswer" placeholder="請輸入答案" required>
+                <button id="btn3" type="submit" class="btn btn-default">
+                    送出答案
+                  </button>
+            </form>
+        </div>
+        <div class="col-lg-3">
+            <img src="https://www.remove.bg/assets/start-0e837dcc57769db2306d8d659f53555feb500b3c5d456879b9c843d1872e7baa.jpg" alt="">
+            <form class="answer4 mt-3">
+                <input type="text" class="form-control" id="submitanswer4" name="submitanswer" placeholder="請輸入答案" required>
+                <button id="btn4" type="submit" class="btn btn-default">
+                    送出答案
+                  </button>
+            </form>
+        </div>
+    </div> -->
+
+    <footer class="m-3">
+        <!-- <hr> -->
+        <p class="m-0">2020 嘉義大學數位學習系系統化教學實作課作品，若有侵權，請通知a0979663740@gmail.com，我們會盡速修改</p>
+        <!-- <p class="mb-2">此網站為嘉義大學數位學習設計與管理學系系統化教學實作課程作業網站，純為教育使用，若有侵權，煩請通知a0979663740@gmail.com，我們會盡速移除!!</p> -->
+        
+    </footer>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+    <script>
+        let s=0;
+        $(document).ready(function(){
+            $('#top').slick({
+                lazyLoad: 'ondemand',
+                autoplay: true,
+                autoplaySpeed: 800,
+                //dots: true,
+                fade: true,
+                //slidesToShow: 3,
+                //slidesToScroll: 3,
+                speed: 600
+            });
+            $('.novel').click(function(){
+                $(this).parent().next().next().next().fadeToggle(400);
+                $(this).toggleClass('Active');
+                
+            })
+            $('form.answer1').on("submit",function(){
+                if($("#submitanswer").val() == "詩詞"){
+                    alert("您答對了!!!");
+                }else{
+                    alert("答錯了，請在思考!!");
+                }
+            })
+            $('form.answer2').on("submit",function(){
+                
+                    if($("#submitanswer2").val() == "詩詞"){
+                        alert("您答對了!!!");
+                        let s=s+1;
+                    }else{
+                        alert("答錯了，請在思考!!");
+                    }
+                
+            })
+            $('form.answer3').on("submit",function(){
+                 
+                    if($("#submitanswer3").val() == "詩詞"){
+                        alert("您答對了!!!");
+                        let s=s+1;
+                    }else{
+                        alert("答錯了，請在思考!!");
+                    }
+                
+            })
+            $('form.answer4').on("submit",function(){
+                
+                    if($("#submitanswer4").val() == "詩詞"){
+                        alert("您答對了!!!");
+                    }else{
+                        alert("答錯了，請在思考!!");
+                    }
+                
+            })
+
+        
+            $(".hamburger").click(function(){
+                $(this).toggleClass('hamburger-x');
+                $(".menu").slideToggle();
+                $(".login").slideToggle();
+            })
+
+            $(window).resize/*控制畫面大小*/(function(){
+                let w =$(window).width();
+                console.log(w);
+                if(w>960){
+                    $('.menu').show();
+                    $('.login').show();
+                }else{
+                    $('.menu').hide();
+                    $('.login').hide();
+                    $('.hamburger').removeClass('hamburger-x');
+                }
+            })
+            
+        })
+        
+           
+    
+
+        
+    </script>
+    
+
+
+    
+</body>
+</html>
